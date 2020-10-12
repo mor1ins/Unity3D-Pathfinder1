@@ -124,7 +124,7 @@ public class Grid : MonoBehaviour
                         closed.Add(node);
                         var distanceToTarget = PathNode.Dist(
                             grid[node.x, node.y], grid[finishNode.x, finishNode.y]);
-                        nodes.Enqueue(node, distanceToTarget);
+                        nodes.Enqueue(node, grid[node.x, node.y].Distance + distanceToTarget);
                     };
                 }
             }
