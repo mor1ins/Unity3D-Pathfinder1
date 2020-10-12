@@ -68,7 +68,9 @@ public class PathNode //: MonoBehaviour
     /// <returns></returns>
     public static float Dist(PathNode a, PathNode b)
     {
-        return Vector3.Distance(a.body.transform.position, b.body.transform.position) + 40 * Mathf.Abs(a.body.transform.position.y - b.body.transform.position.y);
+        return Vector3.Distance(a.body.transform.position, b.body.transform.position)
+            + 5 * (Mathf.Abs(a.body.transform.position.y - b.body.transform.position.y));
+        //return Vector3.Distance(a.body.transform.position, b.body.transform.position);
     }
     
     /// <summary>
